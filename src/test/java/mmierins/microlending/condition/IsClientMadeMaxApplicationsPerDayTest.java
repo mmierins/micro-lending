@@ -44,7 +44,7 @@ public class IsClientMadeMaxApplicationsPerDayTest {
     @Test
     public void is_condition_verified_when_max_applicatons() {
         when(loanApplicationRepository.findByClientAndDateApplied(any(), any())).
-        thenReturn(3);
+        thenReturn(4 /* e.g. 3 already exist + the one that is made */);
 
         isClientMadeMaxApplicationsPerDay = new IsClientMadeMaxApplicationsPerDay(parameterRepositoryMock, loanApplicationRepository);
         assertTrue(isClientMadeMaxApplicationsPerDay.verify(application));
