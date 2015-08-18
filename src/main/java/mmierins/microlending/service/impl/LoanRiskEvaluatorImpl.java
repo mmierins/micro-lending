@@ -14,8 +14,8 @@ import java.util.List;
 @Component
 public class LoanRiskEvaluatorImpl implements LoanRiskEvaluator {
 
-    List<Condition<LoanApplication>> conditions;
-    ConditionEvaluator<LoanApplication> conditionEvaluator;
+    private List<Condition<LoanApplication>> conditions;
+    private ConditionEvaluator<LoanApplication> conditionEvaluator;
 
     private Logger logger = Logger.getLogger(getClass());
 
@@ -29,7 +29,7 @@ public class LoanRiskEvaluatorImpl implements LoanRiskEvaluator {
     }
 
     public LoanRiskEvaluationResult evaluateRisks(LoanApplication application) {
-        ConditionEvaluationResult result = conditionEvaluator.evaluate(application, conditions);
+        ConditionEvaluationResult<LoanApplication> result = conditionEvaluator.evaluate(application, conditions);
         if (result.getStatus() == ConditionEvaluationStatus.NONE_MATCHED) {
             return new LoanRiskEvaluationResult(LoanRiskEvaluationStatus.LOW_RISK, result.getMatchedConditions());
         } else if (result.getStatus() == ConditionEvaluationStatus.NONE_EVALUATED) {

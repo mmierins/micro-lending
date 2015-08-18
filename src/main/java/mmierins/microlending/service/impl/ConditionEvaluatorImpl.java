@@ -16,7 +16,7 @@ public class ConditionEvaluatorImpl<T> implements ConditionEvaluator<T> {
     private Logger logger = Logger.getLogger(getClass());
 
     @Override
-    public ConditionEvaluationResult evaluate(T data, Collection<Condition<T>> conditions) {
+    public ConditionEvaluationResult<T> evaluate(T data, Collection<Condition<T>> conditions) {
         ConditionEvaluationResult<T> result = new ConditionEvaluationResult<>();
 
         logger.info(String.format("ConditionEvaluator initialized with %d conditions", conditions.size()));

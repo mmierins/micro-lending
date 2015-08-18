@@ -7,10 +7,10 @@ import java.util.Set;
 
 public class ConditionEvaluationResult<T> {
 
-    protected Set<Condition<T>> evaluatedConditions = new HashSet<>();
-    protected Set<Condition<T>> matchedConditions = new HashSet<>();
-    protected Set<Condition<T>> unmatchedConditions = new HashSet<>();
-    protected ConditionEvaluationStatus status = ConditionEvaluationStatus.NONE_EVALUATED;
+    private Set<Condition<T>> evaluatedConditions = new HashSet<>();
+    private Set<Condition<T>> matchedConditions = new HashSet<>();
+    private Set<Condition<T>> unmatchedConditions = new HashSet<>();
+    private ConditionEvaluationStatus status = ConditionEvaluationStatus.NONE_EVALUATED;
 
     public Set<Condition<T>> getEvaluatedConditions() {
         return evaluatedConditions;

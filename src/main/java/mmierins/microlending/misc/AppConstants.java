@@ -34,7 +34,7 @@ public class AppConstants {
 
         int code;
 
-        private ResultCode(int code) {
+        ResultCode(int code) {
             this.code = code;
         }
 

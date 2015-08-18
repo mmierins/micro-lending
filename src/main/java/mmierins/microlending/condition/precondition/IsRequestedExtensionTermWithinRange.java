@@ -4,7 +4,6 @@ import mmierins.microlending.domain.nonpersistent.LoanExtensionApplication;
 import mmierins.microlending.service.api.NumericRangeChecker;
 import mmierins.microlending.condition.Condition;
 import mmierins.microlending.condition.ConditionClassification;
-import mmierins.microlending.domain.LoanApplication;
 import mmierins.microlending.misc.AppConstants;
 import mmierins.microlending.repository.ParameterRepository;
 import org.springframework.beans.factory.annotation.Autowired;

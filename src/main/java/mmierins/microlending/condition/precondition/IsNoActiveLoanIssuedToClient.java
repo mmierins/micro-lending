@@ -3,7 +3,6 @@ package mmierins.microlending.condition.precondition;
 import mmierins.microlending.condition.Condition;
 import mmierins.microlending.condition.ConditionClassification;
 import mmierins.microlending.domain.LoanApplication;
-import mmierins.microlending.domain.nonpersistent.LoanExtensionApplication;
 import mmierins.microlending.misc.AppConstants;
 import mmierins.microlending.repository.LoanRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,7 +3,6 @@ package mmierins.microlending.service.impl;
 import mmierins.microlending.domain.nonpersistent.*;
 import mmierins.microlending.condition.Condition;
 import mmierins.microlending.condition.ConditionClassification;
-import mmierins.microlending.service.api.ConditionEvaluator;
 import mmierins.microlending.domain.Loan;
 import mmierins.microlending.domain.LoanApplication;
 import mmierins.microlending.misc.AppConstants;

@@ -10,7 +10,7 @@ public class IdEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     public Long getId() {
         return id;

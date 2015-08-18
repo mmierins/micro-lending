@@ -64,14 +64,14 @@ public class DomainTestDataGenerator {
         return loan;
     }
 
-    public Loan createAndPersistLoan(Loan.LoanStatus status) {
+    private Loan createAndPersistLoan(Loan.LoanStatus status) {
         Loan loan = new Loan();
         loan.setStatus(status);
         loanRepository.saveAndFlush(loan);
         return loan;
     }
 
-    public LoanApplication createAndPersistLoanApplication(Client client, Loan loan) {
+    private LoanApplication createAndPersistLoanApplication(Client client, Loan loan) {
         LoanApplication application = new LoanApplication();
         application.setClient(client);
         application.setLoan(loan);

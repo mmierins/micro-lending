@@ -7,6 +7,6 @@ import java.util.Collection;
 
 public interface ConditionEvaluator<T> {
 
-    ConditionEvaluationResult evaluate(T data, Collection<Condition<T>> conditions);
+    ConditionEvaluationResult<T> evaluate(T data, Collection<Condition<T>> conditions);
 
 }

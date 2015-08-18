@@ -8,13 +8,13 @@ import mmierins.microlending.misc.View;
 public class GenericRestServiceResult {
 
     @JsonView(View.History.class)
-    protected String message;
+    private String message;
     @JsonView(View.History.class)
-    protected String description;
+    private String description;
     @JsonView(View.History.class)
-    protected int code;
+    private int code;
 
-    public GenericRestServiceResult() { }
+    GenericRestServiceResult() { }
 
     public GenericRestServiceResult(String message) {
         this.message = message;

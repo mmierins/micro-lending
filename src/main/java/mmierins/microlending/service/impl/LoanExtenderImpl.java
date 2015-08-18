@@ -2,11 +2,9 @@ package mmierins.microlending.service.impl;
 
 import mmierins.microlending.condition.Condition;
 import mmierins.microlending.condition.ConditionClassification;
-import mmierins.microlending.domain.nonpersistent.LoanExtensionApplication;
 import mmierins.microlending.domain.nonpersistent.*;
 import mmierins.microlending.service.api.*;
 import mmierins.microlending.domain.Loan;
-import mmierins.microlending.domain.LoanApplication;
 import mmierins.microlending.domain.LoanExtension;
 import mmierins.microlending.misc.AppConstants;
 import mmierins.microlending.misc.DateUtils;
@@ -58,12 +56,12 @@ public class LoanExtenderImpl implements LoanExtender {
     @Override
     public ApplicationResult extendLoan(LoanExtensionApplication application) {
         logger.info("Evaluating loan extension preconditions");
-        ConditionEvaluationResult<LoanApplication> preconditionsCheck =
+        ConditionEvaluationResult<LoanExtensionApplication> preconditionsCheck =
                 conditionEvaluator.evaluate(application, preconditions);
 
         if (preconditionsCheck.getStatus() != ConditionEvaluationStatus.ALL_MATCHED) {
             logger.info("Rejecting LoanExension since >0 preconditions were not satisfied");
-            Condition<LoanApplication> firstViolated = preconditionsCheck.getUnmatchedConditions().iterator().next();
+            Condition<LoanExtensionApplication> firstViolated = preconditionsCheck.getUnmatchedConditions().iterator().next();
             return new ApplicationResult(
                     ApplicationStatus.REJECTED,
                     "Loan extension denied",

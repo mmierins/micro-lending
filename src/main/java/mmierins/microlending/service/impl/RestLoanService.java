@@ -1,7 +1,6 @@
 package mmierins.microlending.service.impl;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import mmierins.microlending.domain.nonpersistent.LoanExtensionApplication;
 import mmierins.microlending.domain.Client;
 import mmierins.microlending.domain.Loan;
 import mmierins.microlending.domain.LoanApplication;
@@ -26,7 +25,7 @@ import java.util.Collections;
 import java.util.Set;
 
 @RestController
-public class RestLoanService {
+class RestLoanService {
 
     @Autowired
     private IPAddressResolver ipAddressResolver;

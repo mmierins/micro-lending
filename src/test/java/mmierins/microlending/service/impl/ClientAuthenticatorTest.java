@@ -10,7 +10,7 @@ import static org.mockito.Mockito.*;
 
 public class ClientAuthenticatorTest {
 
-    ClientAuthenticator clientAuthenticator;
+    private ClientAuthenticator clientAuthenticator;
 
     @Test
     public void creates_new_client_when_no_existing_client_found() {

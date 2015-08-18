@@ -7,8 +7,8 @@ import java.util.Set;
 
 public class LoanRiskEvaluationResult {
 
-    LoanRiskEvaluationStatus status;
-    Set<Condition<LoanApplication>> matchedConditions;
+    private LoanRiskEvaluationStatus status;
+    private Set<Condition<LoanApplication>> matchedConditions;
 
     public LoanRiskEvaluationResult(LoanRiskEvaluationStatus status, Set<Condition<LoanApplication>> matchedConditions) {
         this.status = status;
