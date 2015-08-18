@@ -14,7 +14,7 @@ public class MoneySerializer extends JsonSerializer<Long> {
     public void serialize(Long value, JsonGenerator jgen, SerializerProvider provider)
             throws IOException {
         long value2 = MoneyUtils.eurosFromCents(value);
-        jgen.writeString(new BigDecimal(value2).setScale(2, BigDecimal.ROUND_HALF_UP).toString());
+        jgen.writeNumber(new BigDecimal(value2).setScale(2, BigDecimal.ROUND_HALF_UP).toString());
     }
 
 }

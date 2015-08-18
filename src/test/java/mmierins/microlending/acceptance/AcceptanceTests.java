@@ -15,6 +15,8 @@ import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.math.BigDecimal;
+
 import static com.jayway.restassured.RestAssured.given;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -138,7 +140,7 @@ public class AcceptanceTests {
         then().
             statusCode(HttpStatus.OK.value()).
             body("code", Matchers.is(AppConstants.ResultCode.LOAN_HISTORY_RETRIEVED_SUCCESFULLY.getCode())).
-            body("loanHistory[0].amount", Matchers.is("100.00")).
+            body("loanHistory[0].amount", Matchers.is(100.00f)).
             body("loanHistory[0].term", Matchers.is(30)).
             body("loanHistory[0].status", Matchers.is("ACTIVE")).
             body("loanHistory[0].extensions", Matchers.empty());
@@ -154,7 +156,7 @@ public class AcceptanceTests {
         then().
             statusCode(HttpStatus.OK.value()).
             body("code", Matchers.is(AppConstants.ResultCode.LOAN_HISTORY_RETRIEVED_SUCCESFULLY.getCode())).
-            body("loanHistory[0].amount", Matchers.is("100.00")).
+            body("loanHistory[0].amount", Matchers.is(100.00f)).
             body("loanHistory[0].term", Matchers.is(30)).
             body("loanHistory[0].status", Matchers.is("ACTIVE")).
             body("loanHistory[0].extensions[0].term", Matchers.is(7));

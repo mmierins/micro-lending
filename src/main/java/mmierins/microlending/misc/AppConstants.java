@@ -2,7 +2,7 @@ package mmierins.microlending.misc;
 
 public class AppConstants {
 
-    public static final String DATE_FORMATTING_PATTERN = "yyyy-MM-dd hh:mm";
+    public static final String DATE_FORMATTING_PATTERN = "yyyy-MM-dd hh:mm:ss";
     public static final String DATE_FORMATTING_TIMEZONE = "EET";
 
     public enum ParameterKey {
