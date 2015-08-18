@@ -34,8 +34,9 @@ public class IsClientMadeMaxApplicationsPerDay implements Condition<LoanApplicat
 
         int numCurApplications = loanApplicationRepository
                 .findByClientAndDateApplied(data.getClient(), data.getDateApplied());
-        return numCurApplications >= maxApplicationsPerDay;
+        return numCurApplications > maxApplicationsPerDay;
     }
+
     @Override
     public String getMessage() {
         return "Client has made max applications allowed per day";
